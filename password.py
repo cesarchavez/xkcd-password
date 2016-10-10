@@ -17,8 +17,8 @@ def generator(complexity):
     #We pick 3 of them and add it to the container
     while count < complexity:
         word = str(random.choice(words))
-        word = word.title()
         word = word.translate(None, "'")
+        word = word.title()
         password += word
         count += 1
 
