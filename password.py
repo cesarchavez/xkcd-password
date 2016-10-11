@@ -46,6 +46,8 @@ def iteraction():
     print(options)
     election=input("Escribe el numero de la opcion deseada y aprieta enter ")
     print("Tu password es: "+str(options[election-1]))
+    size = len(options[election-1])
+    print("El numero de caracteres del password es: "+str(size))
 
 if len(sys.argv) >= 2:
     foo = str(sys.argv[1])
@@ -55,4 +57,6 @@ else:
 if foo == "options":
     iteraction()
 else:
-    print(password_gen(2))
+    quick=password_gen(2)
+    print(quick)
+    print("El numero de caracteres del password es: "+str(len(quick)))
