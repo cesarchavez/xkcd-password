@@ -18,6 +18,7 @@ def password_gen(complexity):
     #We pick 3 of them and add it to the container
     while count < complexity:
         word = str(random.choice(words))
+        #add a method to remove the element from the array , to avoid duplication
         word = word.translate(None, "'")
         word = word.title()
         password += word
